@@ -23,6 +23,7 @@ struct Params: Decodable {
             let nameValidateRegexp: String?
             let figmaFrameName: String?
             let nameReplaceRegexp: String?
+            let scale: Double?
         }
 
         struct Images: Decodable {

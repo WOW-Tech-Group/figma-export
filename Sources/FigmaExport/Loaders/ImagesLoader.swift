@@ -33,10 +33,12 @@ final class ImagesLoader {
                 filter: filter
             )
         case (.ios, _):
+            let formatParams = FormatParams(scale: params.common?.icons?.scale, format: "pdf")
+
             return try _loadImages(
                 fileId: params.figma.lightFileId,
                 frameName: iconsFrameName,
-                params: PDFParams(),
+                params: formatParams,
                 filter: filter
             )
         }
